@@ -108,20 +108,20 @@ function deleteQuote(quote, li) {
     .then( () => li.remove() )
 }
 
-function likeQuote() {
-    return fetch("http://localhost:3000/likes", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        },
-        body: JSON.stringify({
-            quoteId: quote.id,
-            createdAt: Date.now()
-        })
-    })
-    .then( () => {
-        let likes = parseInt(span.innerText)
-        span.innerText = ++likes
-    })
-}
+// function likeQuote() {
+//     return fetch("http://localhost:3000/likes", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json",
+//             "Accept": "application/json"
+//         },
+//         body: JSON.stringify({
+//             quoteId: quote.id,
+//             createdAt: Date.now()
+//         })
+//     })
+//     .then( () => {
+//         let likes = parseInt(span.innerText)
+//         span.innerText = ++likes
+//     })
+// }
